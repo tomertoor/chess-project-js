@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    </head>
+    <body>
+        <div id="games"></div>
+    </body>
+</html>
+
+<script>
+    console.log(window.location.href)
+    async function getGames() {
+        const response = await fetch(window.location.href);
+        const games = response.json();
+
+        return response;
+    }
+    getGames().then(data => {
+        var gameTable = document.getElementById("games");
+        for(var game of data) {
+            gameTable.insertRow(game.)
+        }
+    });
+</script>
